@@ -1,9 +1,11 @@
 from django.contrib.flatpages.models import FlatPage
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from mptt.models import MPTTModel, TreeForeignKey
 from django.utils.translation import ugettext_lazy as _
 
 
+@python_2_unicode_compatible
 class Category(MPTTModel):
     """
     The model of page category
@@ -29,7 +31,7 @@ class Category(MPTTModel):
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
     modified = models.DateTimeField(_(u'modified'), auto_now=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     class MPTTMeta():
@@ -40,6 +42,7 @@ class Category(MPTTModel):
         verbose_name_plural = _(u'categories')
 
 
+@python_2_unicode_compatible
 class CFlatPage(FlatPage):
     """
     The model of categorized Flatpage
@@ -51,7 +54,7 @@ class CFlatPage(FlatPage):
         verbose_name=u'category',
         related_name='page', )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     class Meta():
