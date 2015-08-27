@@ -10,8 +10,8 @@ class Category(MPTTModel):
     """
     The model of page category
     """
-    title = models.CharField(u'title', max_length=100)
-    slug = models.SlugField(u'slug', max_length=60, unique=True)
+    title = models.CharField(_(u'title'), max_length=100)
+    slug = models.SlugField(_(u'slug'), max_length=60, unique=True)
     parent = TreeForeignKey(
         'self',
         null=True,
@@ -19,15 +19,15 @@ class Category(MPTTModel):
         related_name='children',
         verbose_name=u'parent', )
     description = models.CharField(
-        u'description',
+        _(u'description'),
         max_length=255,
         blank=True,
         null=True, )
     text = models.TextField(
-        u'test',
+        _(u'text'),
         blank=True,
         null=True, )
-    order = models.PositiveSmallIntegerField(_(u'order number'), default=1, )
+    num = models.PositiveSmallIntegerField(_(u'order number'), default=1, )
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
     modified = models.DateTimeField(_(u'modified'), auto_now=True)
 
@@ -35,7 +35,7 @@ class Category(MPTTModel):
         return self.title
 
     class MPTTMeta():
-        order_insertion_by = ['order']
+        order_insertion_by = ['num']
 
     class Meta():
         verbose_name = _(u'category')
@@ -51,7 +51,7 @@ class CFlatPage(FlatPage):
     description = models.CharField(_(u'description'), max_length=100, blank=True)
     category = TreeForeignKey(
         Category,
-        verbose_name=u'category',
+        verbose_name=_(u'category'),
         related_name='page', )
 
     def __str__(self):
