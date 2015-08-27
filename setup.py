@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='django-categorized-flatpages',
     version='0.1',
-    packages = ['categorized_flatpages'],
+    packages = ['cflatpages'],
     include_package_data = True,
     license='MIT',
     keywords=['django', 'flatpages', 'categories', 'mptt', ],
