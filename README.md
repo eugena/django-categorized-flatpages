@@ -1,5 +1,4 @@
 Django Categorized Flatpages
-
 ============================
 
 Installing:
@@ -10,6 +9,7 @@ pip install -e https://github.com/eugena/django_categorized_flatpages#egg=django
 
 In settings:
 
+```python
 INSTALLED_APPS = (
 	...
 	'django.contrib.sites',
@@ -26,3 +26,4 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 	...
 )
+```
