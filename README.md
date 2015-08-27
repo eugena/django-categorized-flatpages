@@ -4,7 +4,7 @@ Django Categorized Flatpages
 Installing:
 
 ```bash
-pip install -e https://github.com/eugena/django_categorized_flatpages.git#egg=django_categorized_flatpages
+pip install -e git://github.com/eugena/django_categorized_flatpages.git#egg=django_categorized_flatpages
 ```
 
 In settings:
