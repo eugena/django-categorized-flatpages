@@ -1,6 +1,8 @@
 Django Categorized Flatpages
 ============================
 
+[![Build Status](https://travis-ci.org/eugena/django-categorized-flatpages.svg?branch=master)](https://travis-ci.org/eugena/django-categorized-flatpages)
+
 Installing:
 
 ```bash
