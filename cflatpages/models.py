@@ -5,6 +5,9 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Category(MPTTModel):
+    """
+    The model of page category
+    """
     title = models.CharField(u'title', max_length=100)
     slug = models.SlugField(u'slug', max_length=60, unique=True)
     parent = TreeForeignKey(
