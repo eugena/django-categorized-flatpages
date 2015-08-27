@@ -18,7 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
 	...
     'mptt',
-    'categorized_flatpages',
+    'cflatpages',
     ...
 )
 
