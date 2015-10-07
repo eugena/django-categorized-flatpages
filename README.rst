@@ -11,6 +11,10 @@ django-categorized-flatpages
 .. image:: https://travis-ci.org/eugena/django-categorized-flatpages.png?branch=master
     :target: https://travis-ci.org/eugena/django-categorized-flatpages
 
+.. image:: https://requires.io/github/eugena/django-categorized-flatpages/requirements.svg?branch=master
+     :target: https://requires.io/github/eugena/django-categorized-flatpages/requirements/?branch=master
+     :alt: Requirements Status
+
 Django categorized by mptt flatpages
 
 Documentation
