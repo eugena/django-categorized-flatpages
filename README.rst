@@ -15,7 +15,7 @@ django-categorized-flatpages
      :target: https://requires.io/github/eugena/django-categorized-flatpages/requirements/?branch=master
      :alt: Requirements Status
 
-Django categorized by mptt flatpages
+Django categorized by mptt flatpages.
 
 Documentation
 -------------
