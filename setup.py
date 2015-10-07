@@ -1,27 +1,59 @@
-from setuptools import setup
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import sys
+
+import cflatpages
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+version = cflatpages.__version__
+
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist upload')
+    os.system('python setup.py bdist_wheel upload')
+    sys.exit()
+
+if sys.argv[-1] == 'tag':
+    print("Tagging the version on github:")
+    os.system("git tag -a %s -m 'version %s'" % (version, version))
+    os.system("git push --tags")
+    sys.exit()
+
+readme = open('README.rst').read()
+history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='django-categorized-flatpages',
-    version='0.1',
-    packages = ['cflatpages'],
-    include_package_data = True,
-    license='MIT',
-    keywords=['django', 'flatpages', 'categories', 'mptt', ],
-    description='Django categorized by mptt flatpages with SEO',
-    long_description=open('README.md', 'r').read(),
-    url='https://github.com/eugena/django_categorized_flatpages',
+    version=version,
+    description="""Django categorized by mptt flatpages""",
+    long_description=readme + '\n\n' + history,
     author='Eugena Mihailikova',
     author_email='eugena.mihailikova@gmail.com',
-    install_requires=[
-        'django-mptt',
+    url='https://github.com/eugena/django_categorized_flatpages',
+    packages=[
+        'cflatpages',
     ],
+    include_package_data=True,
+    install_requires=[
+    ],
+    license="BSD",
+    zip_safe=False,
+    keywords='django flatpages category',
     classifiers=[
-        "Programming Language :: Python",
-        "License :: OSI Approved :: BSD License",
-        "Development Status :: 4 - Beta",
-        "Operating System :: OS Independent",
-        "Framework :: Django",
-        "Intended Audience :: Developers",
-        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        'Development Status :: 3 - Alpha',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
     ],
 )
