@@ -48,8 +48,11 @@ class CFlatPage(FlatPage):
     """
     The model of categorized Flatpage
     """
-    keywords = models.CharField(_(u'keywords'), max_length=255, blank=True)
-    description = models.CharField(_(u'description'), max_length=100, blank=True)
+    keywords = models.CharField(_(u'keywords'), max_length=100, blank=True)
+    description = models.CharField(
+        _(u'description'),
+        max_length=255,
+        blank=True)
     category = TreeForeignKey(
         Category,
         verbose_name=_(u'category'),
