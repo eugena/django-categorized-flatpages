@@ -5,8 +5,8 @@ django-categorized-flatpages
 .. image:: https://badge.fury.io/py/django-categorized-flatpages.png
     :target: https://badge.fury.io/py/django-categorized-flatpages
 
-.. image:: https://coveralls.io/repos/eugena/django-categorized-flatpages/badge.png
-    :target: https://coveralls.io/r/eugena/django-categorized-flatpages?branch=master
+.. image:: https://coveralls.io/repos/eugena/django-categorized-flatpages/badge.svg?branch=master&service=github
+    :target: https://coveralls.io/github/eugena/django-categorized-flatpages?branch=master
 
 .. image:: https://travis-ci.org/eugena/django-categorized-flatpages.png?branch=master
     :target: https://travis-ci.org/eugena/django-categorized-flatpages
