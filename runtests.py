@@ -18,6 +18,7 @@ try:
             "django.contrib.auth",
             "django.contrib.contenttypes",
             "django.contrib.sites",
+            'django.contrib.flatpages',
             "cflatpages",
         ],
         SITE_ID=1,
