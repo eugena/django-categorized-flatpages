@@ -10,7 +10,7 @@ Tests for `django-categorized-flatpages` models module.
 
 from django.test import TestCase
 
-from cflatpages import models
+# from cflatpages import models
 
 
 class TestCflatpages(TestCase):
