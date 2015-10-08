@@ -50,6 +50,6 @@ class CategorizedFlatPageAdmin(FlatPageAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(MPTTModelAdmin):
-    mptt_level_indent = 20
+    pass
 
 admin.site.unregister(FlatPage)
