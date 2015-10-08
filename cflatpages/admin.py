@@ -18,6 +18,7 @@ class CategorizedFlatpageForm(FlatpageForm):
     
     class Meta:
         model = CFlatPage
+        fields = '__all__'
 
 
 @admin.register(CFlatPage)
