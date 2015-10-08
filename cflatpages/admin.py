@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib.flatpages.admin import FlatPageAdmin, FlatpageForm
 from django.contrib.flatpages.models import FlatPage
 from django import forms
+from mptt.admin import MPTTModelAdmin
 from ckeditor.widgets import CKEditorWidget
 from django.utils.translation import ugettext_lazy as _
 
@@ -48,7 +49,7 @@ class CategorizedFlatPageAdmin(FlatPageAdmin):
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    pass
+class CategoryAdmin(MPTTModelAdmin):
+    mptt_level_indent = 20
 
 admin.site.unregister(FlatPage)
