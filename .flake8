@@ -1,2 +1,2 @@
 [flake8]
-exclude = docs/*,*/migrations/*
+exclude = .*,docs/*,*/migrations/*
