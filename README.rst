@@ -37,9 +37,3 @@ Features
 --------
 
 * TODO
-
-Cookiecutter Tools Used in Making This Package
-----------------------------------------------
-
-*  cookiecutter
-*  cookiecutter-djangopackage
