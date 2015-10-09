@@ -11,6 +11,7 @@ from cflatpages.models import CFlatPage, Category
 if 'ckeditor' in settings.INSTALLED_APPS:
     from ckeditor.widgets import CKEditorWidget
 
+
 class CategorizedFlatpageForm(FlatpageForm):
     """
     The form for the CategorizedFlatPage model
