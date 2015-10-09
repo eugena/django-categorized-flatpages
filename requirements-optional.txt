@@ -1,0 +1,2 @@
+django-ckeditor==5.0.2
+django-admin-bootstrapped==2.5.6
