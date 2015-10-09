@@ -4,11 +4,12 @@ from django.contrib.flatpages.admin import FlatPageAdmin, FlatpageForm
 from django.contrib.flatpages.models import FlatPage
 from django import forms
 from mptt.admin import MPTTModelAdmin
-from ckeditor.widgets import CKEditorWidget
 from django.utils.translation import ugettext_lazy as _
 
 from cflatpages.models import CFlatPage, Category
 
+if 'ckeditor' in settings.INSTALLED_APPS:
+    from ckeditor.widgets import CKEditorWidget
 
 class CategorizedFlatpageForm(FlatpageForm):
     """
