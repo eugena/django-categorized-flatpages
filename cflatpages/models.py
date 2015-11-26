@@ -56,7 +56,7 @@ class CFlatPage(FlatPage):
     category = TreeForeignKey(
         Category,
         verbose_name=_(u'category'),
-        related_name='page', )
+        related_name='page_category', )
 
     def __str__(self):
         return self.title
