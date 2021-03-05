@@ -1,4 +1,4 @@
 Django==1.11.29
 wheel==0.36.2
-django-mptt==0.11.0
+django-mptt==0.12.0
 
