@@ -1,4 +1,4 @@
-Django==3.2
+Django==3.2.6
 wheel==0.36.2
 django-mptt==0.12.0
 
